@@ -1,0 +1,50 @@
+//Simple addition
+public class Operators {
+
+    public static void main(String[] args) {
+
+        int a = 10;
+        int b = 3;
+
+        int result = a + b;
+
+        System.out.println("Result: " + result);
+    }
+}
+
+//Compound Assignment
+public class Operators {
+
+    public static void main(String[] args) {
+
+        int a = 10;
+        int b = 60;
+
+        a += 20;   // a = 30
+        b *= 2;    // b = 120
+
+        System.out.println("Value of a: " + a);
+        System.out.println("Value of b: " + b);
+    }
+}
+
+//Operator Precedence
+public class Operators {
+
+    public static void main(String[] args) {
+
+        int result = 10 + 6 * 2 - 8 / 4;
+
+        System.out.println("Result: " + result);
+    }
+}
+//Paranthesis
+public class Operators{
+
+    public static void main(String[] args) {
+
+        int result = (10 + 6) * 2 - 8 / 4;
+
+        System.out.println("Result: " + result);
+    }
+}
