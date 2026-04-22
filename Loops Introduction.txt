@@ -1,0 +1,15 @@
+public class Loops {
+
+    public static void main(String[] args) {
+
+        int n = 1; // initialization
+        n = 5;     // condition
+        n++;       // update
+
+        System.out.println("Hello World");
+        System.out.println("Hello World");
+        System.out.println("Hello World");
+        System.out.println("Hello World");
+        System.out.println("Hello World");
+    }
+}
