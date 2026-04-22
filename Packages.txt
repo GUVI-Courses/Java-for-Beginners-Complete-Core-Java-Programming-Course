@@ -1,0 +1,29 @@
+public class PackageDemo {
+
+    // com.college1.Student
+    static class College1 {
+        static class Student {
+            public void getDetails() {
+                System.out.println("Students in ABC college");
+            }
+        }
+    }
+
+    // com.college2.Student
+    static class College2 {
+        static class Student {
+            public void getDetails() {
+                System.out.println("Students in XYZ college");
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+
+        College1.Student s1 = new College1.Student();
+        College2.Student s2 = new College2.Student();
+
+        s1.getDetails();
+        s2.getDetails();
+    }
+}
