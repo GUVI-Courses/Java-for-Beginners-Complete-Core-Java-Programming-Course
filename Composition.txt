@@ -1,0 +1,27 @@
+class PetrolEngine{
+    void start(){
+        System.out.println("Petrol engine starts");
+    }
+}
+
+class DieselEngine{
+    void start(){
+        System.out.println("Diesel Engine Starts");
+    }
+}
+
+class Car{
+    DieselEngine engine=new DieselEngine();
+
+    void move(){
+        engine.start();
+        System.out.println("Car is Moving");
+    }
+}
+public class CompositionDemo {
+    public static void main(String[] args) {
+        Car c=new Car();
+        c.move();
+
+    }
+}
