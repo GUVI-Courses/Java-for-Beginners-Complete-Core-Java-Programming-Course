@@ -1,0 +1,36 @@
+public class Operators {
+    public static void main(String[] args) {
+
+        int num = 4;
+
+        if (num % 2 == 0)
+            System.out.println("even");
+        else
+            System.out.println("odd");
+    }
+}
+
+//Ternary
+public class Operators {
+    public static void main(String[] args) {
+
+        int num = 4;
+
+        String result = (num % 2 == 0) ? "Even" : "Odd";
+
+        System.out.println(result);
+    }
+}
+
+//Bitwise
+public class Operators {
+    public static void main(String[] args) {
+
+        int a = 5;  // 0101
+        int b = 3;  // 0011
+
+        System.out.println(a & b); // AND
+        System.out.println(a | b); // OR
+        System.out.println(a ^ b); // XOR
+    }
+}
