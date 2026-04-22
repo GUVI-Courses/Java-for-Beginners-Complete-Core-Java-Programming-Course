@@ -1,0 +1,24 @@
+public class Arrays {
+    public static void main(String[] args) {
+
+        int marks[] = {54, 85, 36, 77, 56}; // arrays
+
+        int max = marks[0];
+
+        // For loop 
+        /*
+        for(int i = 0; i < marks.length; i++) {
+            System.out.println(marks[i]);
+        }
+        */
+
+        // Enhanced for loop
+        for (int n : marks) {
+            if (n > max) {
+                max = n;
+            }
+        }
+
+        System.out.println(max);
+    }
+}
