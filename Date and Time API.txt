@@ -1,0 +1,39 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class DateAndTime {
+
+    public static void main(String[] args) {
+
+        // Current Date & Time 
+        LocalDateTime dateTime = LocalDateTime.now();
+        System.out.println("Current DateTime: " + dateTime);
+
+        // Formatting Date 
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        String formatted = dateTime.format(formatter);
+        System.out.println("Formatted: " + formatted);
+
+        // Creating Specific DateTime 
+        LocalDateTime newYear = LocalDateTime.of(2026, 1, 1, 12, 0);
+        System.out.println("New Year DateTime: " + newYear);
+
+        // Date Comparison
+        LocalDate date1 = LocalDate.of(2025, 12, 25);
+        LocalDate date2 = LocalDate.of(2026, 1, 1);
+
+        if (date1.isBefore(date2)) {
+            System.out.println("date1 is before date2: True");
+        } else {
+            System.out.println("date1 is before date2: False");
+        }
+
+        //Date Equality Check
+        if (date1.isEqual(date2)) {
+            System.out.println("Dates are equal: True");
+        } else {
+            System.out.println("Dates are equal: False");
+        }
+    }
+}
