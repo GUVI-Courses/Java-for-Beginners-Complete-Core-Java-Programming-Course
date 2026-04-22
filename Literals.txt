@@ -1,0 +1,20 @@
+public class Literals {
+
+    public static void main(String[] args) {
+
+        int num = 10;
+        String name = "Java";
+        boolean flag = true;
+
+        System.out.println(num + " " + name + " " + flag);
+    }
+}
+
+
+public class Literals {
+
+    public static void main(String[] args) {
+       int marks=97;
+
+    }
+}
