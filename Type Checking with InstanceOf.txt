@@ -1,0 +1,30 @@
+class Animal {
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog Barks");
+    }
+}
+
+class Cat extends Animal {
+    void meow() {
+        System.out.println("Cat Meows");
+    }
+}
+
+public class CastingDemo {
+    public static void main(String[] args) {
+
+        Animal obj = new Cat();
+
+        if (obj instanceof Dog) {
+            Dog d = (Dog) obj;
+            d.bark();
+        } 
+        else if (obj instanceof Cat) {
+            Cat c = (Cat) obj;
+            c.meow();
+        }
+    }
+}
