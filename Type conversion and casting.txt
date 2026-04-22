@@ -1,0 +1,22 @@
+//Narrowing
+public class Casting {
+    public static void main(String[] args) {
+
+        int i = 190;        // 190 - 256 = -66
+        byte b = (byte) i;  // overflow happens here
+
+        System.out.println(b); // Output: -66
+    }
+}
+//Widening
+public class Casting {
+    public static void main(String[] args) {
+
+        int n = 5;
+        double d = 3.5;
+
+        double result = n + d;
+
+        System.out.println(result); // Output: 8.5
+    }
+}
