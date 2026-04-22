@@ -1,0 +1,56 @@
+abstract class Vehicle {
+
+    String name;
+
+    // Constructor
+    Vehicle(String name) {
+        this.name = name;
+    }
+
+    // Abstract method
+    abstract void start();
+
+    // Concrete method
+    public void display() {
+        System.out.println("Displaying vehicle: " + name);
+    }
+}
+
+// Child class
+class Car extends Vehicle {
+
+    Car(String name) {
+        super(name);
+    }
+
+    public void start() {
+        System.out.println("Car is starting: " + name);
+    }
+}
+
+// Another child class
+class Bike extends Vehicle {
+
+    Bike(String name) {
+        super(name);
+    }
+
+    public void start() {
+        System.out.println("Bike is starting: " + name);
+    }
+}
+
+// Main class
+public class AbstractDemo {
+
+    public static void main(String[] args) {
+
+        Vehicle v1 = new Car("BMW");
+        v1.start();
+        v1.display();
+
+        Vehicle v2 = new Bike("Yamaha");
+        v2.start();
+        v2.display();
+    }
+}
