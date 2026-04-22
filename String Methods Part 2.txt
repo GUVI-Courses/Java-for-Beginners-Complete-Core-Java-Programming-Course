@@ -1,0 +1,40 @@
+import java.util.Arrays;
+import java.util.List;
+
+public class StringsDemo {
+
+    public static void main(String[] args) {
+
+        //JOIN WITH LIST
+        List<String> list = Arrays.asList("Java", "Python", "C++");
+        String result = String.join("-", list);
+        System.out.println(result);
+
+
+        //REPEAT
+        String name = "Hi ".repeat(5);
+        System.out.println(name);
+
+
+        //TEXT BLOCK 
+        String text = """
+                SELECT *
+                FROM Students
+                WHERE marks > 35
+                """;
+        System.out.println(text);
+
+
+        //EMPTY and BLANK
+        String s = " ";
+
+        System.out.println(s.isEmpty());  // false
+        System.out.println(s.isBlank());  // true
+
+
+        //PRIMITIVE TO STRING
+        int num = 100;
+        String res = String.valueOf(num);
+        System.out.println(res);
+    }
+}
