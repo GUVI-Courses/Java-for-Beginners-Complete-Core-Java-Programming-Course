@@ -1,0 +1,10 @@
+public class Data_Types {
+
+    public static void main(String[] args) {
+        int i =19;
+        byte b=(byte)i;
+        System.out.println(b);
+
+        //System.out.println((10 + 6 )* 2 - 8 / 4);   //16*2-2=32-2;30
+    }
+}
