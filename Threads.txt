@@ -1,0 +1,22 @@
+class MyThread extends Thread {
+    public void run() {
+        try {
+            Thread.sleep(2000);
+        } 
+        catch (Exception e) {
+            System.out.println("Thread is resumed after sleep");
+        }
+    }
+}
+
+public class ThreadsDemo {
+    public static void main(String[] args) throws InterruptedException {
+
+        MyThread t1 = new MyThread();
+
+        t1.start();
+        t1.join();
+
+        System.out.println(t1.getState());
+    }
+}
