@@ -1,0 +1,57 @@
+public class StringsDemo {
+
+    public static void main(String[] args) {
+
+        // BASIC STRING METHODS 
+        String s = "Java Programming";
+
+        System.out.println(s.length());
+        System.out.println(s.charAt(1));
+
+
+        //EQUALS / COMPARE
+        String a = "Java";
+        String b = "java";
+
+        System.out.println(a.equals(b));              // false
+        System.out.println(a.equalsIgnoreCase(b));    // true
+        System.out.println(a.compareTo(b));           // ASCII difference
+
+
+        //SEARCH OPERATIONS
+        System.out.println(s.contains("Java"));
+        System.out.println(s.indexOf("a"));
+        System.out.println(s.lastIndexOf("a"));
+        System.out.println(s.startsWith("Ja"));
+        System.out.println(s.endsWith("ing"));
+
+
+        //CASE & TRIM
+        System.out.println(s.trim());
+        System.out.println(s.toUpperCase());
+        System.out.println(s.toLowerCase());
+
+
+        //SUBSTRING
+        System.out.println(s.substring(5));
+        System.out.println(s.substring(0, 4));
+
+
+        //REPLACE
+        System.out.println(s.replace("J", "K"));
+
+
+        //SPLIT 
+        String data = "Java,Python,C++";
+        String[] arr = data.split(",");
+
+        for (String lang : arr) {
+            System.out.println(lang);
+        }
+
+
+        //JOIN
+        String result = String.join(" ", "Hello", "World");
+        System.out.println(result);
+    }
+}
