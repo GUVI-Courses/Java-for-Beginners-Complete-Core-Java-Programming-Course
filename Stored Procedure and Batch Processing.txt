@@ -1,0 +1,63 @@
+//Stored Procedure
+import java.sql.*;
+
+public class JDBCDemo {
+    public static void main(String[] args) throws Exception {
+
+        String url = "jdbc:postgresql://localhost:5432/Demo";
+        String name = "postgres";
+        String pwd = "1022";
+
+        Class.forName("org.postgresql.Driver");
+
+        Connection c = DriverManager.getConnection(url, name, pwd);
+        System.out.println("Program is executing");
+
+        int id = 2;
+        int newMarks = 99;
+
+        CallableStatement cs = c.prepareCall("{call update_student_marks(?, ?)}");
+
+        cs.setInt(1, id);
+        cs.setInt(2, newMarks);
+
+        cs.execute();
+
+        System.out.println("Procedure is called");
+
+        cs.close();
+        c.close();
+    }
+}
+
+
+//Batch Processing
+
+import java.sql.*;
+
+public class JDBCDemo {
+    public static void main(String[] args) throws Exception {
+
+        String url = "jdbc:postgresql://localhost:5432/Demo";
+        String name = "postgres";
+        String pwd = "1022";
+
+        Class.forName("org.postgresql.Driver");
+
+        Connection c = DriverManager.getConnection(url, name, pwd);
+        System.out.println("Program is executing");
+
+        Statement st = c.createStatement();
+
+        st.addBatch("INSERT INTO student VALUES (11, 'Jay', 44)");
+        st.addBatch("INSERT INTO student VALUES (12, 'Priya', 34)");
+        st.addBatch("INSERT INTO student VALUES (13, 'Babu', 65)");
+
+        st.executeBatch();
+
+        System.out.println("Batch Processing is complete");
+
+        st.close();
+        c.close();
+    }
+}
