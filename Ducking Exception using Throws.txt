@@ -1,0 +1,23 @@
+package Demo;
+
+class User {
+    public int getLength(String name) throws NullPointerException {
+        int len = name.length();
+        return len;
+    }
+}
+
+public class ExceptionsDemo {
+    public static void main(String[] args) {
+
+        User us = new User();
+
+        try {
+            int result = us.getLength("Java");
+            System.out.println(result);
+        } 
+        catch (Exception e) {
+            System.out.println("Cannot find the length of the null");
+        }
+    }
+}
