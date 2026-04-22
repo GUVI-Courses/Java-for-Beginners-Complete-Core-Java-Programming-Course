@@ -1,0 +1,47 @@
+class Test{
+
+   public void display(){
+       var name="Ro";
+   }
+}
+public class VarDemo {
+
+    public static void main(String[] args) {
+        /*var age=89; //int age=89
+        var name="Joy";//String name
+
+        //System.out.println(age+" "+name);
+
+        var list=new ArrayList<String>(); //ArrayList<String> list=new ArrayList<>();
+        var map=new HashMap<Integer,String>();
+
+        var arr=new int[]{2,3,5};
+
+        for(var num:arr){
+            System.out.println(num);
+        }
+
+        var numbers= List.of(1,2,3,4,5);
+        System.out.println(numbers);*/
+
+        var x=10;
+
+
+        //var data=null;
+
+        String result = "Hi";
+        for(int i = 0; i < 5; i++) {
+            result = result + i;
+        }
+        System.out.println(result);
+
+        String query = """
+SELECT *
+FROM students
+WHERE marks > 80
+""";
+        System.out.println(query);
+    }
+
+
+}
