@@ -1,0 +1,37 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class RegexDemo {
+
+    public static void main(String[] args) {
+
+        //ONLY DIGITS
+        String s1 = "abc";
+        System.out.println(s1.matches("\\d+"));   // false
+
+        String s2 = "12345";
+        System.out.println(s2.matches("\\d+"));   // true
+
+
+        // ONLY UPPERCASE LETTERS 
+        String s3 = "12345";
+        System.out.println(s3.matches("[A-Z]+")); // false
+
+
+        //EXACT LENGTH
+        String s4 = "12345";
+        System.out.println(s4.matches("\\d{4}")); // false (needs exactly 4 digits)
+
+
+        //EMAIL VALIDATION
+        String email = "test123@gmail.com";
+        System.out.println(email.matches("[a-zA-Z0-9._]+@[a-z]+\\.com")); // true
+
+
+        //USING PATTERN & MATCHER 
+        Pattern pattern = Pattern.compile("\\d+");
+        Matcher matcher = pattern.matcher("12345");
+
+        System.out.println(matcher.matches()); // true
+    }
+}
