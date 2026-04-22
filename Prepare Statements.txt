@@ -1,0 +1,28 @@
+import java.sql.*;
+
+public class JDBCDemo {
+    public static void main(String[] args) throws Exception {
+
+        String url = "jdbc:postgresql://localhost:5432/Demo";
+        String name = "postgres";
+        String pwd = "1022";
+
+        Class.forName("org.postgresql.Driver");
+
+        Connection c = DriverManager.getConnection(url, name, pwd);
+        System.out.println("Program is executing");
+
+        PreparedStatement ps = c.prepareStatement("INSERT INTO student VALUES (?, ?, ?)");
+
+        ps.setInt(1, 8);
+        ps.setString(2, "Raj");
+        ps.setInt(3, 77);
+
+        ps.executeUpdate();
+
+        System.out.println("Query is complete");
+
+        ps.close();
+        c.close();
+    }
+}
