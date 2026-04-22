@@ -1,0 +1,46 @@
+BasicPhone.java 
+package Tutorial;
+
+public class BasicPhone {
+
+    public void makeCall() {
+        System.out.println("Making a call");
+    }
+
+    public void sendMessage() {
+        System.out.println("Sending a message");
+    }
+}
+
+SmartPhone.java
+
+package Tutorial;
+
+public class SmartPhone extends BasicPhone {
+
+    public void playMovie() {
+        System.out.println("Playing a Movie");
+    }
+
+    public void internet() {
+        System.out.println("Accessing the internet");
+    }
+}
+
+InheritanceDemo.java
+package Tutorial;
+
+public class InheritanceDemo {
+
+    public static void main(String[] args) {
+
+        SmartPhone ph = new SmartPhone();
+
+        ph.internet();
+        ph.playMovie();
+
+        // inherited methods
+        ph.makeCall();
+        ph.sendMessage();
+    }
+}
