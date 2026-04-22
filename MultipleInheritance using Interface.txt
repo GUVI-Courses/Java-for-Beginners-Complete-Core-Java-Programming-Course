@@ -1,0 +1,31 @@
+package MultipleInheritance;
+
+interface Phone {
+    void makeCall();
+}
+
+interface Camera {
+    void takePhoto();
+}
+
+class SmartPhone implements Phone, Camera {
+
+    @Override
+    public void makeCall() {
+        System.out.println("Making a call");
+    }
+
+    @Override
+    public void takePhoto() {
+        System.out.println("Taking Photo");
+    }
+}
+
+public class InterfaceDemo {
+    public static void main(String[] args) {
+
+        SmartPhone s = new SmartPhone();
+        s.makeCall();
+        s.takePhoto();
+    }
+}
