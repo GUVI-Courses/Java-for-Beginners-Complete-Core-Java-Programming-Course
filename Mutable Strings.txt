@@ -1,0 +1,39 @@
+//StringBuffer
+public class StringsDemo {
+    public static void main(String[] args) {
+
+        StringBuffer sb = new StringBuffer("Hello");
+
+        sb.append(" World");
+        System.out.println(sb);
+
+        sb.insert(5, "Java");
+        System.out.println(sb);
+
+        sb.replace(0, 5, "Hi");
+        System.out.println(sb);
+
+        sb.delete(0, 2);
+        System.out.println(sb);
+    }
+}
+
+//StringBuilder
+public class StringsDemo {
+    public static void main(String[] args) {
+
+        StringBuilder sb = new StringBuilder("Hello");
+
+        sb.append(" World");
+        System.out.println(sb);
+
+        sb.insert(5, "Java");
+        System.out.println(sb);
+
+        sb.replace(0, 5, "Hi");
+        System.out.println(sb);
+
+        sb.delete(0, 2);
+        System.out.println(sb);
+    }
+}
