@@ -1,0 +1,38 @@
+public class Operators {
+
+    public static void main(String[] args) {
+
+        // 1. Relational Operators
+        int x = 7;
+        int y = 9;
+
+        boolean result1 = x <= y;
+        System.out.println(result1); // true
+
+        int a = 9;
+        int b = 9;
+
+        boolean result2 = a != b;
+        System.out.println(result2); // false
+
+
+        // 2. Character Comparison (ASCII / Unicode)
+        char var1 = 'A'; // 65
+        char var2 = 'a'; // 97
+
+        System.out.println((var1 < var2)); // true
+
+
+        // 3. Floating Point Comparison
+        float num1 = 0.3f;
+        float num2 = 0.3f;
+
+        boolean result3 = (num1 == num2);
+        System.out.println( result3); // true
+
+
+        // 4.Comparison of operators
+        boolean result4 = (x < y) && (a == b);
+        System.out.println(result4); // true
+    }
+}
