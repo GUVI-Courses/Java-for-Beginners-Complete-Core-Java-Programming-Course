@@ -1,0 +1,26 @@
+public class Arrays {
+
+    public static void main(String[] args) {
+
+        Student students[] = new Student[3];
+
+        students[0] = new Student();
+        students[0].id = 11;
+        students[0].name = "Ram";
+        students[0].marks = 90;
+
+        students[1] = new Student();
+        students[1].id = 12;
+        students[1].name = "Sara";
+        students[1].marks = 88;
+
+        students[2] = new Student();
+        students[2].id = 13;
+        students[2].name = "Mike";
+        students[2].marks = 60;
+
+        for (Student s : students) {
+            System.out.println(s.id + " " + s.name + " " + s.marks);
+        }
+    }
+}
