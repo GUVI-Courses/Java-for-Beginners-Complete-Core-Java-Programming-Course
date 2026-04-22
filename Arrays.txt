@@ -1,0 +1,24 @@
+public class Arrays {
+
+    public static void main(String[] args) {
+
+        /*int s1 = 90;
+        int s2 = 100;
+        int s3 = 76;
+        int s4 = 55;
+        int s5 = 89;*/
+
+        int marks[] = new int[5]; // arrays
+
+        marks[1] = 100;
+        marks[4] = 89;
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println(marks[i]);
+        }
+
+        marks[4] = 99;
+
+        System.out.println(marks[4]);
+    }
+}
