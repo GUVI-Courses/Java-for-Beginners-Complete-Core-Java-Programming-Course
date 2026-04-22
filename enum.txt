@@ -1,0 +1,48 @@
+enum TrafficSignal {
+    RED,
+    YELLOW,
+    GREEN
+}
+
+public class EnumDemo {
+    public static void main(String[] args) {
+
+        TrafficSignal signal = TrafficSignal.YELLOW;
+        System.out.println(signal);
+    }
+}
+
+public class EnumDemo {
+    public static void main(String[] args) {
+
+        TrafficSignal signal = TrafficSignal.YELLOW;
+        System.out.println(signal.ordinal());
+    }
+}
+
+public class EnumDemo {
+    public static void main(String[] args) {
+
+        TrafficSignal signal = TrafficSignal.YELLOW;
+
+        System.out.println(signal.name());
+        System.out.println(signal);
+    }
+}
+
+public class EnumDemo {
+    public static void main(String[] args) {
+
+        TrafficSignal[] signalArr = TrafficSignal.values();
+        System.out.println(signalArr[1]);
+    }
+}
+
+public class EnumDemo {
+    public static void main(String[] args) {
+
+        for (TrafficSignal signal : TrafficSignal.values()) {
+            System.out.println(signal);
+        }
+    }
+}
