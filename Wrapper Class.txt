@@ -1,0 +1,19 @@
+public class Wrapper {
+
+    public static void main(String[] args) {
+
+        int n=8;
+        Integer n1=10;
+       // System.out.println(n1);
+
+        Integer n2=n; //Auto-Boxing
+       // System.out.println(n2);
+
+        int num=n2; //Un-Boxing
+        //System.out.println(num);
+
+        String age="20";
+        int res=Integer.parseInt(age);
+        System.out.println(res+5);
+    }
+}
