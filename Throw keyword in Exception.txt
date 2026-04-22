@@ -1,0 +1,23 @@
+class Function {
+    public void divide(int a, int b) {
+        if (b == 0)
+            throw new ArithmeticException();
+
+        int res = a / b;
+        System.out.println(res);
+    }
+}
+
+public class ExceptionsDemo {
+    public static void main(String[] args) {
+
+        Function fun = new Function();
+
+        try {
+            fun.divide(10, 2);
+        } 
+        catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero");
+        }
+    }
+}
