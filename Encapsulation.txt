@@ -1,0 +1,32 @@
+class Stu{
+    private String name;
+    private int age;
+
+    public String getName(){ //getter
+        return name;
+    }
+
+    public int getAge(){
+        return age;
+    }
+
+    public void setName(String n){ //setter
+        name=n;
+    }
+
+    public void setAge(int n1){
+        age=n1;
+    }
+}
+
+public class Encapsulation {
+
+    public static void main(String[] args) {
+        Stu obj= new Stu();
+        obj.setName("Ram");
+        obj.setAge(17);
+        System.out.println(obj.getAge()+" "+obj.getName());
+
+
+    }
+}
