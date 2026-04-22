@@ -1,0 +1,24 @@
+class Animal {
+    void eat() {
+        System.out.println("Animal eats");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog Barks");
+    }
+}
+
+public class CastingDemo {
+    public static void main(String[] args) {
+
+        Animal obj = new Animal();
+
+        // Compiles because Dog is a subclass of Animal, but fails at runtime since the actual object is Animal, not Dog
+        Dog d = (Dog) obj;
+
+        obj.eat();
+        d.bark();
+    }
+}
