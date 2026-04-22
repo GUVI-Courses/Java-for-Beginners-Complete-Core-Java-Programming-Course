@@ -1,0 +1,55 @@
+//Final variable
+public class FinalDemo {
+
+    public static void main(String[] args) {
+
+        final int num = 8;
+
+        //num = 9; // Cannot assign a value to final variable num
+
+        System.out.println(num);
+    }
+}
+
+//Final Class
+final class Calc {
+
+    void print() {
+        System.out.println("Hello");
+    }
+}
+
+/*class AdvCalc extends Calc { 
+    // final class cannot be extended 
+}*/
+
+public class FinalDemo {
+
+    public static void main(String[] args) {
+
+        final double pi = 3.14; // allowed value is constant
+
+    }
+}
+
+//Final Method
+class Calc {
+
+    final void print() {
+        System.out.println("Hello");
+    }
+}
+
+class AdvCalc extends Calc {
+
+   /* void print() { 
+        // Cannot override the final method from Calc
+    }
+} */
+
+public class FinalDemo {
+
+    public static void main(String[] args) {
+
+    }
+}
