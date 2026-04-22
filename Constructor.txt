@@ -1,0 +1,27 @@
+class Car {
+    String brand;
+    int year;
+
+    public Car(String brand, int year) {
+        this.brand = brand;
+        this.year = year;
+    }
+
+    @Override
+    public String toString() {
+        return brand + " - " + year;
+    }
+}
+
+public class ConstructorDemo {
+    public static void main(String[] args) {
+
+        Car myCar = new Car("BMW", 2023);
+
+        System.out.println(myCar.brand);
+        System.out.println(myCar.year);
+
+
+        System.out.println(myCar);
+    }
+}
