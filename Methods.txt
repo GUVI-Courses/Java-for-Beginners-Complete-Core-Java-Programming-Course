@@ -1,0 +1,30 @@
+class Phone {
+
+    public int calc(int n1, int n2) {
+        return n1 + n2;
+    }
+
+    public int calc(int n1, int n2, int n3) {
+        return n1 + n2 + n3;
+    }
+
+    public double calc(double n1, int n2) {
+        return n1 + n2;
+    }
+}
+
+public class Intro {
+
+    public static void main(String[] args) {
+
+        Phone ph = new Phone();
+
+        int value1 = ph.calc(5, 6);
+        int value2 = ph.calc(5, 6, 7);
+        double value3 = ph.calc(5.5, 6);
+
+        System.out.println(value1);
+        System.out.println(value2);
+        System.out.println(value3);
+    }
+}
