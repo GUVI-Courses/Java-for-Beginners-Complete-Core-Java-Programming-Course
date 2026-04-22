@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayListDemo {
+    public static void main(String[] args) {
+
+        List<Integer> numbers = new ArrayList<>();
+
+        // Adding elements
+        numbers.add(10);
+        numbers.add(11);
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(21);
+
+        System.out.println(numbers);
+
+        // Accessing elements
+        System.out.println(numbers.get(0) + " " + numbers.get(1));
+
+        // Updating element
+        numbers.set(1, 8);
+        System.out.println(numbers);
+
+        // Removing by index
+        numbers.remove(3);
+        System.out.println(numbers);
+
+        // Removing by value
+        numbers.remove(Integer.valueOf(8));
+        System.out.println(numbers);
+
+        numbers.remove(Integer.valueOf(10));
+        System.out.println(numbers);
+
+        // Iteration using enhanced for loop
+        for (Integer num : numbers) {
+            System.out.println(num);
+        }
+    }
+}
