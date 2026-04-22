@@ -1,0 +1,21 @@
+public class Operators {
+    public static void main(String[] args) {
+
+        int x = 8;
+        int y = 6;
+        int a = 6;
+        int b = 9;
+
+        boolean r1 = x > y || a > b || a > 1;
+        System.out.println(r1); // true
+
+        boolean r2 = (x > 10) && (x / 2 > 1);
+        System.out.println(r2); // false
+
+        boolean r3 = (a > b && x > a) || (b > y);
+        System.out.println(r3); // true
+
+        boolean r4 = (a > b && x > a) && (b > y);
+        System.out.println(r4); // false
+    }
+}
