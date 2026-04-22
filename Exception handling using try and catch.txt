@@ -1,0 +1,26 @@
+public class ExceptionsDemo {
+
+    public static void main(String[] args) {
+
+        int a = 10;
+        int b = 2;
+        int[] arr = {1, 2, 3};
+        String s = null;
+
+        try {
+            int res = a / b; // 10/2
+            System.out.println(res); // 5
+            System.out.println(arr[2]);
+            System.out.println(s.length());
+        }
+        catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero" + " " + e);
+        }
+        catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Check the Index" + " " + e);
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
