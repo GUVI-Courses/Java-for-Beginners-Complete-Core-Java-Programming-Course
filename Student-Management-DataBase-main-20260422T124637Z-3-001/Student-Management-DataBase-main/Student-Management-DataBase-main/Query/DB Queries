@@ -1,0 +1,16 @@
+CREATE TABLE student(
+sid INT PRIMARY KEY,
+sname VARCHAR(50),
+marks INT
+);
+
+
+CREATE OR REPLACE PROCEDURE add_student(
+    p_id INT,
+    p_name VARCHAR,
+    p_marks INT
+)
+LANGUAGE SQL
+AS $$
+INSERT INTO student VALUES (p_id, p_name, p_marks);
+$$;
