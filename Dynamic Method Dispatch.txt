@@ -1,0 +1,27 @@
+class Account{
+    void display(){
+        System.out.println("General Account");
+    }
+}
+
+class SavingsAccount extends Account{
+    void display(){
+        System.out.println("Savings Account");
+    }
+}
+
+class CurrentAccount extends Account{
+    void display(){
+        System.out.println("Current Account");
+    }
+}
+
+public class DynamicMethod {
+    public static void main(String[] args) {
+
+        Account acc=new SavingsAccount();
+       Account acc1=new CurrentAccount();
+        acc.display();
+        acc1.display();
+    }
+}
