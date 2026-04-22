@@ -1,0 +1,22 @@
+interface Phone{
+    void Power();
+}
+
+interface Camera{
+    void Power();
+}
+
+class SmartPhone implements Phone,Camera{
+
+    public void Power(){
+        System.out.println("Power on");
+    }
+
+}
+public class InterfaceDemo {
+    public static void main(String[] args) {
+
+        SmartPhone s= new SmartPhone();
+        s.Power();
+    }
+}
