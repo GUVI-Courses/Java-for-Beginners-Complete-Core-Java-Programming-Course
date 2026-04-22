@@ -1,0 +1,65 @@
+enum PaymentStatus {
+    PENDING,
+    SUCCESS,
+    FAILED,
+    REFUNDED
+}
+//using if and else
+public class EnumDemo {
+
+    public static void main(String[] args) {
+
+        PaymentStatus status = PaymentStatus.FAILED;
+
+        if (status == PaymentStatus.SUCCESS) {
+            System.out.println("Payment is successful");
+        } else if (status == PaymentStatus.FAILED) {
+            System.out.println("Payment is failed");
+        } else if (status == PaymentStatus.PENDING) {
+            System.out.println("Payment is in pending");
+        } else {
+            System.out.println("Payment is refunded");
+        }
+    }
+}
+//Switch
+public class EnumDemo {
+
+    public static void main(String[] args) {
+
+        PaymentStatus status = PaymentStatus.REFUNDED;
+
+        switch (status) {
+            case PENDING:
+                System.out.println("Payment is in pending");
+                break;
+
+            case FAILED:
+                System.out.println("Payment is failed");
+                break;
+
+            case SUCCESS:
+                System.out.println("Payment is successful");
+                break;
+
+            default:
+                System.out.println("Payment is refunded");
+        }
+    }
+}
+
+//Enhanced Switch
+public class EnumDemo {
+
+    public static void main(String[] args) {
+
+        PaymentStatus status = PaymentStatus.PENDING;
+
+        switch (status) {
+            case PENDING -> System.out.println("Payment is in pending");
+            case FAILED -> System.out.println("Payment is failed");
+            case SUCCESS -> System.out.println("Payment is successful");
+            default -> System.out.println("Payment is refunded");
+        }
+    }
+}
