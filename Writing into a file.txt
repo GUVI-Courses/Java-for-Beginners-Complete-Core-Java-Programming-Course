@@ -1,0 +1,23 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
+public class FileDemo {
+    public static void main(String[] args) {
+
+        try {
+            FileWriter fr = new FileWriter("Write.txt", true);
+            BufferedWriter br = new BufferedWriter(fr);
+
+            br.write("Here");
+            br.newLine();
+            br.write("Welcome to Java programming");
+
+            br.close();
+        } 
+        catch (Exception e) {
+            System.out.println("Error");
+        }
+
+        System.out.println("Program Successful");
+    }
+}
