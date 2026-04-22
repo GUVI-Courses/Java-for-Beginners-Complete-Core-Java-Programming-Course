@@ -1,0 +1,92 @@
+//Single Ineritance
+
+//  Parent Class 
+class BasicPhone {
+
+    public void makeCall() {
+        System.out.println("Making a call");
+    }
+
+    public void sendMessage() {
+        System.out.println("Sending a message");
+    }
+}
+
+//  Child Class 
+class SmartPhone extends BasicPhone {
+
+    public void playMovie() {
+        System.out.println("Playing a Movie");
+    }
+
+    public void internet() {
+        System.out.println("Accessing the internet");
+    }
+}
+
+//  Main Class 
+public class InheritanceDemo {
+
+    public static void main(String[] args) {
+
+        SmartPhone ph = new SmartPhone();
+
+        // Child class methods
+        ph.playMovie();
+        ph.internet();
+
+        // Parent class methods (inherited)
+        ph.makeCall();
+        ph.sendMessage();
+    }
+}
+
+//Multilevel Inheritance
+package Tutorial;
+
+// ===== Top parent Class =====
+class BasicPhone {
+
+    public void makeCall() {
+        System.out.println("Making a call");
+    }
+
+    public void sendMessage() {
+        System.out.println("Sending a message");
+    }
+}
+
+// ===== Parent Class =====
+class SmartPhone extends BasicPhone {
+
+    public void internet() {
+        System.out.println("Accessing the internet");
+    }
+}
+
+// ===== Child Class =====
+class AdvancedPhone extends SmartPhone {
+
+    public void playMovie() {
+        System.out.println("Playing a Movie");
+    }
+}
+
+// ===== Main Class =====
+public class MultilevelDemo {
+
+    public static void main(String[] args) {
+
+        AdvancedPhone ph = new AdvancedPhone();
+
+        // From AdvancedPhone
+        ph.playMovie();
+
+        // From SmartPhone
+        ph.internet();
+
+        // From BasicPhone
+        ph.makeCall();
+        ph.sendMessage();
+    }
+}
