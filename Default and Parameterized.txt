@@ -1,0 +1,22 @@
+class Car {
+    String brand;
+    int year;
+
+    // Default constructor
+    public Car() {
+        brand = "Audi";
+        year = 2025;
+    }
+
+    // Parameterized constructor (brand + year)
+    public Car(String brand, int year) {
+        this.brand = brand;
+        this.year = year;
+    }
+
+   
+    public Car(String brand) {
+        this.brand = brand;
+        this.year = 0; // default value
+    }
+}
