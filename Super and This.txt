@@ -1,0 +1,67 @@
+//Super
+class Person {
+
+    public Person(int age) {
+        System.out.println("Person age: " + age);
+    }
+}
+
+class Employee extends Person {
+
+    public Employee() {
+        super(30);  // calling parent constructor
+        System.out.println("Employee Constructor");
+    }
+}
+
+public class Demo1 {
+    public static void main(String[] args) {
+        Employee e = new Employee();
+    }
+}
+
+//This
+class Employee {
+
+    public Employee() {
+        System.out.println("Default Constructor");
+    }
+
+    public Employee(String name) {
+        this();  // calling same class constructor
+        System.out.println("Employee name: " + name);
+    }
+}
+
+public class Demo2 {
+    public static void main(String[] args) {
+        Employee e = new Employee("Tara");
+    }
+}
+
+//Super and This
+class Person {
+
+    public Person(int age) {
+        System.out.println("Person age: " + age);
+    }
+}
+
+class Employee extends Person {
+
+    public Employee() {
+        super(50);  // parent constructor
+        System.out.println("Employee Constructor");
+    }
+
+    public Employee(String name) {
+        this();  // calls Employee()
+        System.out.println("Employee name: " + name);
+    }
+}
+
+public class Demo3 {
+    public static void main(String[] args) {
+        Employee e = new Employee("Hi");
+    }
+}
