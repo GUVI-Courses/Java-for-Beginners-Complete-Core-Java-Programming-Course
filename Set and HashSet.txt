@@ -1,0 +1,35 @@
+import java.util.*;
+
+public class SetDemo {
+
+    public static void main(String[] args) {
+
+        // HashSet example
+        Set<Integer> set1 = new HashSet<>();
+        set1.add(10);
+        set1.add(20);
+
+        Set<Integer> set2 = new HashSet<>();
+        set2.add(40);
+        set2.add(60);
+
+        set1.addAll(set2);
+        System.out.println(set1);
+
+        // LinkedHashSet (insertion order)
+        Set<Integer> linkedSet = new LinkedHashSet<>();
+        linkedSet.add(10);
+        linkedSet.add(5);
+        linkedSet.add(7);
+
+        System.out.println(linkedSet);
+
+        // TreeSet (sorted order)
+        Set<Integer> treeSet = new TreeSet<>();
+        treeSet.add(20);
+        treeSet.add(10);
+        treeSet.add(17);
+
+        System.out.println(treeSet);
+    }
+}
