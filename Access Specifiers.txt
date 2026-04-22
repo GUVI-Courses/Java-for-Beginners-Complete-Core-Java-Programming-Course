@@ -1,0 +1,96 @@
+//Public
+package com.college;
+
+public class Student {
+
+    public String name = "Tara";
+
+    public void showName() {
+        System.out.println(name);
+    }
+}
+package Demo;
+
+import com.college.Student;
+
+public class Test {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.showName();
+    }
+}
+
+//Private
+package com.college;
+
+public class Student {
+
+    private String name = "Tara";
+
+    public void printName() {
+        System.out.println(name);
+    }
+}
+
+package Demo;
+
+import com.college.Student;
+
+public class Test {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.printName();   // 
+        // s.name 
+    }
+}
+
+//Default
+package com.college;
+
+public class Student {
+
+    String name = "abc";   // default
+
+    public void printName() {
+        System.out.println(name);
+    }
+}
+//From another package
+package Demo;
+
+import com.college.Student;
+
+public class Test {
+    public static void main(String[] args) {
+        Student s = new Student();
+        // s.name 
+    }
+}
+
+//Protected
+//package com.college;
+
+public class Student {
+
+    protected String name = "Protected variable";
+}
+
+package Demo;
+
+import com.college.Student;
+
+class SubClass extends Student {
+
+    public void show() {
+        System.out.println(name); // (inheritance)
+    }
+}
+
+package Demo;
+
+public class Test {
+    public static void main(String[] args) {
+        SubClass obj = new SubClass();
+        obj.show();
+    }
+}
