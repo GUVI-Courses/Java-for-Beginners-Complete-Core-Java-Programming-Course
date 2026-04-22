@@ -1,0 +1,33 @@
+// Extending Thread 
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread is running (extends Thread)");
+    }
+}
+
+//Implementing Runnable 
+class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("Thread is running (Runnable Interface)");
+    }
+}
+
+public class ThreadsDemo {
+    public static void main(String[] args) {
+
+        //  Using start()
+        MyThread t1 = new MyThread();
+        t1.start();  
+        // start() creates a new thread → runs run() in parallel
+
+        // Using run() directly
+        MyThread t2 = new MyThread();
+        t2.run();  
+        
+        // Runnable Interface 
+        MyRunnable obj = new MyRunnable();
+        Thread t3 = new Thread(obj);
+        t3.start();  
+
+    }
+}
