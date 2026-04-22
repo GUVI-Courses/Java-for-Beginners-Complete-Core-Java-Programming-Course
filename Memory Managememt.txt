@@ -1,0 +1,23 @@
+class Students{
+    int id;
+    int age;
+
+    public void printData(){
+        int temp=100;
+    }
+}
+
+public class Memory {
+
+    public static void main(String[] args) {
+        int x=5;
+        int y=10;
+
+        Students s=new Students();  //s->reference variable
+        s=new Students();
+        s=null;
+        s.id=1;
+        s.age=20;
+
+    }
+}
