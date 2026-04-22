@@ -1,0 +1,20 @@
+public class StringsDemo {
+    public static void main(String[] args) {
+
+        String name = "C++";
+        String name2 = "C++";
+
+        String name3 = new String("C++");
+
+        System.out.println(name == name2);  // true
+        System.out.println(name == name3);  // false
+
+        String name4 = new String("Hello");
+
+        name4 = name4 + " ";
+        name4 = name4 + "World";
+        name4 = name4 + "!";
+
+        System.out.println(name4);
+    }
+}
