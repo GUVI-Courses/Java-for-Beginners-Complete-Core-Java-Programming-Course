@@ -1,0 +1,20 @@
+class Example {
+
+    public int square(int n) {
+        int num = n * n;
+        return num;
+    }
+}
+
+public class Intro {
+
+    public static void main(String[] args) {
+
+        int num = 5;
+
+        Example eg = new Example();
+        int result = eg.square(num);
+
+        System.out.println(result);
+    }
+}
