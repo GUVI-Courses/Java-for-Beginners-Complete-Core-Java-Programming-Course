@@ -1,0 +1,66 @@
+//Association
+
+// Student Class 
+class Student {
+    String name;
+
+    Student(String name) {
+        this.name = name;
+    }
+}
+
+// Teacher Class 
+class Teacher {
+
+    void teach(Student s) {
+        System.out.println("Teaching " + s.name);
+    }
+}
+
+// Main Class
+public class AssociationDemo {
+
+    public static void main(String[] args) {
+
+        Student s = new Student("Students");
+        Teacher t = new Teacher();
+
+        t.teach(s);
+    }
+}
+
+//Aggregation
+
+// Employee Class 
+class Employee {
+    String name;
+
+    Employee(String name) {
+        this.name = name;
+    }
+}
+
+// Department Class 
+class Department {
+    Employee emp;
+
+    Department(Employee emp) {
+        this.emp = emp;
+    }
+
+    void showEmployee() {
+        System.out.println(emp.name);
+    }
+}
+
+// Main Class 
+public class AggregationDemo {
+
+    public static void main(String[] args) {
+
+        Employee emp = new Employee("Tara");
+        Department d = new Department(emp);
+
+        d.showEmployee();
+    }
+}
