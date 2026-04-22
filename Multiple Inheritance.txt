@@ -1,0 +1,36 @@
+// First Parent class
+class BasicPhone {
+
+    public void makeCall() {
+        System.out.println("Making a call");
+    }
+}
+
+//  Second Parent class
+class Camera {
+
+    public void takePhoto() {
+        System.out.println("Taking a photo");
+    }
+}
+
+//  Child Class
+public class SmartPhone extends BasicPhone, Camera {
+
+    public void internet() {
+        System.out.println("Accessing the internet");
+    }
+}
+
+//  Main Class 
+class Demo {
+
+    public static void main(String[] args) {
+
+        SmartPhone ph = new SmartPhone();
+
+        ph.makeCall();
+        ph.takePhoto();
+        ph.internet();
+    }
+}
