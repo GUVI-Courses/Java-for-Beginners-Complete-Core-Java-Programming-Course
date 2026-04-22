@@ -1,0 +1,42 @@
+import java.util.*;
+
+public class MapDemo {
+
+    public static void main(String[] args) {
+
+        Map<Integer, String> students = new HashMap<>();
+
+        students.put(101, "Rahul");
+        students.put(102, "Anu");
+        students.put(103, "Rahul");
+
+        students.put(101, "Kiran"); // overwrite
+
+        System.out.println(students);
+
+        students.remove(102);
+
+        System.out.println(students);
+
+        System.out.println(students.get(101));
+
+        // contains
+        System.out.println(students.containsKey(101));
+        System.out.println(students.containsValue("Geeta"));
+
+        // keySet loop
+        for (Integer key : students.keySet()) {
+            System.out.println(key + " " + students.get(key));
+        }
+
+        // values loop
+        for (String value : students.values()) {
+            System.out.println(value);
+        }
+
+        // entrySet
+        for (Map.Entry<Integer, String> entry : students.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
+    }
+}
